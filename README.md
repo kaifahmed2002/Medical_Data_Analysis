@@ -14,10 +14,7 @@ Dataset of personal medical data of 1,338 patients with a variety of variables t
 There are a variety of variables that will impact the outcome of this analysis:
 
 - Age: age of primary beneficiary
-  - Teen:13-19 
-  - Adult: 20-39 
-  - Middle Age Adult : 40-59 	
-  - Senior Adult :60+
+  
 - Sex: insurance contractor gender,
   - Male 
   - Female
@@ -31,7 +28,6 @@ There are a variety of variables that will impact the outcome of this analysis:
 - Region: Region of domicile of the patient in the United States.
   - Northeast 
   - Southeast 
-  - Southwest 
   - Northwest
 - Charges: Individual medical costs billed by health insurance for services provided
 
