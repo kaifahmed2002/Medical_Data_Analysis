@@ -1,38 +1,40 @@
 ~~~ SQL
-/*Age Categories*/
+/*Median medical Charges by each Region*/
 
-CREATE TEMP TABLE AGECAT AS -- Creating TEMP TABLE AGECAT
-SELECT 
-  age, region, charges,
+SELECT distinct region, median_value AS Median
+FROM (
+  SELECT distinct region,
+         charges AS median_value,
+         ROW_NUMBER() OVER (PARTITION BY region ORDER BY charges) AS row_num,
+         COUNT(*) OVER (PARTITION BY region) AS total_rows
+  FROM cs2_personalmedicalcost.medical_data_dataset
+) AS subquery
+WHERE row_num IN (FLOOR((total_rows+1)/2), FLOOR((total_rows+2)/2));
 
-  CASE 
-  WHEN age <= 19 THEN 'Teen'
-  WHEN age BETWEEN 20 AND 39 THEN 'Adult'
-  WHEN age BETWEEN 40 AND 59 THEN 'Middle Age'
-  WHEN age >= 60 THEN 'Senior'
-  END AS AgeCategory
-FROM `single-being-353600.Medical_Insurance_Data.Insurance_Data`;
-
-~~~
-
-~~~ SQL 
-/*Age Category Averages*/
-SELECT 
-  DISTINCT AgeCategory, 
-  COUNT(*) OVER (PARTITION BY AgeCategory) AS AgeCategoryCount,
-  ROUND(AVG(charges) OVER (PARTITION BY AgeCategory),2) AS AvgChargeAge
-FROM AGECAT
-ORDER BY AvgChargeAge;
 ~~~
 
 **Result**
+|Region|Region_Median|
+|---|---|
+|northeast|10058|
+|northwest|8966|
+|southeast|8871|
 
-|AgeCategory|AgeCategoryCount|AvgChargeAge|
-|---|---|---|
-|Teen|137|8407.35|
-|Adult|537|10603.65|
-|Middle Age|550|15431.97|
-|Senior|114|21248.02|
+~~~ SQL 
+/*Averages medical Charges by each Region*/
+
+SELECT distinct region, avg(charges) 
+FROM cs2_personalmedicalcost.medical_data_dataset
+group by region
+order by 2
+~~~
+
+**Result**
+|Region|Region_Median|
+|---|---|
+|northwest|12417|
+|northeast|13406|
+|southeast|14483|
 
 
 ~~~ SQL 
