@@ -1,8 +1,8 @@
 # Medical Data Analysis
 
-## About the company
+## About the Project
 
-Dataset of personal medical data of 1,338 patients with a variety of variables that have an affect on the cost of medical services provided. The purpose of the analysis is to analyze the effects of variables on the cost of medical care, e.g. age, gender, region, etc. 
+In this case study, I will perform data analysis for a Fictional healthcare organization Medicare, As a Junior Data Analyst in the Medicare Solutions project, my role is crucial in supporting the analysis of the personal medical data of 1,338 patients.The primary objective of the analysis is to gain insights into the factors influencing the cost of medical care. By analyzing variables such as age, gender, region, and other relevant factors, Medicare Solutions aims to identify patterns and understand the effects of these variables on the cost of medical services.  I  
 
 
 ## ERD 
@@ -49,11 +49,11 @@ The objective of the analysis is to analyze the effects of variables on the cost
 
 ![Q1 P1](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/31d4fab9-4080-461c-94fa-f4fea0c27c62)
 
-The overall average of charges in the dataset is $13,270.42. However, there is an uneven distribution of charges in the dataset. As indicated in the histogram above there is a right skew that is affecting the average. The median charge, $9,377.90, is a better indication of the amount of a typical medical charge. 
+The overall average of charges in the dataset is $13,463.17. However, there is an uneven distribution of charges in the dataset. As indicated in the histogram above there is a right skew that is affecting the average. The median charge, $9,421.96, is a better indication of the amount of a typical medical charge. 
 
 ![Q1 P2](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/5c02d5f0-0497-4a09-862c-afe1fae5b94d)
 
-The same is true for the distribution of charges in the four regions in the dataset. As aforementioned the median is a better indication of the typical medical charge within each region. The Southwest region has the lowest median charge, $8,798.59, of all the regions in the dataset. This can be attributed to the Southwest region having the least amount of smokers, 58, overall, the least amount of female smokers, 21, in the dataset, and the second smallest amount of male smokers, 37, in the dataset. This is significant due to smokers incurring charges that are four times greater than non-smokers on average!
+Northeast have the Highest median medical charges of $10,058 and on the other hand, Southeast have the Lowest median medical charges of $8,871.
 
 
 2. Which  gender has the highest highest typical charges?
@@ -62,39 +62,44 @@ The distribution of the charges of both male and females have a right skew in wh
 
 ![Q2P1 (1)](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/78519fb6-30fb-4567-aef8-b27445d79d76)
 
-The median charges of each sex is a better indicator of the typical charges. Males have a median charge of $9,369.62  and females have a median charge of  $9,412.96 as indicated in the bar ch
-art above.
+Average medical charges of Male's is Greater then Female's.
+
+Female - $12,945, 
+
+Male - $13,969.
 
 ![Q2 P2 (1)](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/bde6db10-5278-431e-afbe-d63e5e24fca8)
 
-The median charges of each sex is a better indicator of the typical charges. Males have a median charge of $9,369.62  and females have a median charge of  $9,412.96 as indicated in the bar ch
-art above.
+On the other hand, Median medical charges of Female's is Greater then Male's
+
+Female - $9,575, 
+
+Male - $9,289.
 
 3. Is there correlation between the number of dependents a patient has and medical charges?
 
 ![Q3](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/2e9974ae-a33b-477a-83ca-129b65fb94ca)
 
-As indicated in the scatter plot above there is no linear correlation between number of dependents and charges. The correlation coefficient of comparing the number of children a patient has to charges incurred is .07, indicating that there is no correlation. This is also evident in the line of best fit seen on the scatter plot above.
-
+The Correlation between Number of Children and Medical Charges is 0.085, that means their is no correlation between the number of dependents a patient has and medical charges.
 
 4. Is there correlation between age and medical charges?
    
 ![Q4](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/a204a3d6-3481-473f-a06e-c9809a2c7dfe)
 
-There is a low correlation between age and charges incurred by patients. This is indicated by the correlation coefficient of 0.30 as well as the line of best fit in the scatter plot above. This is also indicated in the average charges of each age category as well. Teens have an average medical charge of $8,407.35, Adults have an average charge of $10,603.65, Middle Aged Adults have an average medical charge of $15,431.97, and Seniors have an average medical charge of $21,248.02. There is a clear pattern of increased cost as the age of the patient increases.
+The Correlation between Patients Age and Medical Charges is 0.30, That means their is low positive correlation between patients age and medical charges, This suggests that medical charges tend to increase as the age of the patient increases
 
 5. Do individuals with higher BMI have higher medical costs?
 
 ![Q5](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/a6cd1aff-b681-431b-9fab-30a84a8e398a)
 
-Yes, individuals with higher BMIs have higher medical costs. The higher a patient’s BMI the higher the average charges as indicated in the line chart above. 
+Each BMI (weight) category has the following average charges: Underweight(below 18.5) - $9,042, Normal(18.5 - 24.9) - $10,650, Overweight(25.5 - 29.9) - $11,164, Obese(30+) - $15,497, The Obese weight category exhibits the highest average charges, while the Underweight category has the lowest. This suggests that medical charges tend to increase with weight gain. 
 
 6. What is the relationship between smoking and medical charges?
    
 ![Q6 P1 (1)](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/91bfe98f-5b17-45f6-a60e-a3fd7ace8de6)
 
-Smoking adversely impacts medical charges. As indicated in the bar chart above smokers have an average charge of $32,050.23 and non-smokers have an average medical charge of $8,434.27. Smokers have an average charge that is nearly four times greater than the amount of non-smokers.
+The average medical charges of smokers and non-smokers are as follows: Smoker - $31,886, Non-smoker - $8,507. Patients who smoke have significantly higher average medical charges, with smokers having an average of $31,886 compared to $8,507 for non-smokers. 
 
 ![Q6 P2](https://github.com/kaifahmed2002/Medical_Data_Analysis/assets/92524691/1be35244-94fb-454f-8797-69334b19e911)
 
-As seen in the histogram above, the distribution of charges of smokers is bimodal. The two modes are indicative of the subgroups related to BMI. There are two subgroups, patients that have a BMI less than 30 and patients that have a BMI greater than 30. Recall that a BMI over 30 is categorized as obese and a BMI less than 30 is categorized as not obese.
+As seen in the histogram, the distribution of charges of smokers is bimodal. The two modes are indicative of the subgroups related to BMI. 
